@@ -10,19 +10,13 @@ app.get("/", (req, res) => {
     res.send(user + "!");
 });
 
-
-const rutas_predeterminadas = [ ruta1={
-    "adress": "adresses 1",
-    "time": "15min",
-    "point": "East"
-}];
 const rutas = [];
 let route = "";
 let time = "";
 let direction = "";
 
 function getAddress(){
-    let value = Math.floor(Math.random() * 5);
+    let value = Math.floor(Math.random() * 6);
     switch(value){
         case 1:
             route = "2640 Lomita Blvd, Torrance, CA 90505";
