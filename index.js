@@ -20,7 +20,7 @@ function getAddress(){
     switch(value){
         case 1:
             route = "2640 Lomita Blvd, Torrance, CA 90505";
-            time = "45 minutes";
+            time = "50 minutes";
             direction = "WEST"
             return {route, time, direction};
         case 2:
@@ -54,6 +54,10 @@ function getAddress(){
 app.post("/route", (req, res) => {
     const { ruta } = req.body;//user
     rutas.push({ street: ruta.street, route: ruta.route, direction: ruta.cardinal});
+    if(typeof ruta.route != 'number'){        
+        res.json({"status": "Error, Bus route must be a number!"});
+    }
+    console.log(direction);
     res.json({ruta1: getAddress(), ruta2: getAddress(), ruta3: getAddress()});
 });
 
@@ -65,4 +69,3 @@ app.get("/view_routes", (_, res)=>{
 app.listen(5000, () => {
         console.log('Server started on port 5000');
 });
-
