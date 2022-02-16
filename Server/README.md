@@ -9,7 +9,6 @@
 2. Set POST 
 3. Go to >body>raw and select JSON
 4. Set the data test as follow. In route must be a number. 
-5. 
 ```JSON
 {
     "ruta": {
