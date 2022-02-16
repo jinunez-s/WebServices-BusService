@@ -4,12 +4,6 @@ const app = express();
 app.use(express.json()); 
 
 //Endpoints
-app.get("/", (req, res) => {
-    //recieve an parameter
-    const user = req.query.user;
-    res.send(user + "!");
-});
-
 const rutas = [];
 let route = "";
 let time = "";
@@ -50,7 +44,6 @@ function getAddress(){
             return {route, time, direction};
     }
 }
-
 app.post("/route", (req, res) => {
     const { ruta } = req.body;//user
     rutas.push({ street: ruta.street, route: ruta.route, direction: ruta.cardinal});
@@ -66,6 +59,6 @@ app.get("/view_routes", (_, res)=>{
 });
 
 //Server start listenining to request
-app.listen(5000, () => {
-        console.log('Server started on port 5000');
+app.listen(4000, () => {
+        console.log('Server started on port 4000');
 });

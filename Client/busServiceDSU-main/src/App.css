@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.appBody {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.appForm {
+  display: inline-block;
+  padding: 30px;
+  background-color: rgb(82, 218, 69);
+  font-weight: bold;
+  border-radius: 15px 0 0 15px;
+}
+
+.contain {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.contain__data {
+  background-color: red;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contain__data-info {
+  margin-bottom: 10px;
+}
+
+.contain__data-info p {
+  font-size: 16px;
+}
